@@ -72,22 +72,22 @@ const FormModal = ({
   const [open, setOpen] = useState(false);
 
   const Form = () => {
-    const [state, formAction] = useFormState(deleteActionMap[table], {
-      success: false,
-      error: false,
-    });
+    // const [state, formAction] = useFormState(deleteActionMap[table], {
+    //   success: false,
+    //   error: false,
+    // });
 
-    const router = useRouter();
-    useEffect(() => {
-      if (state.success) {
-        toast(`${table} has been deleted!`);
-        setOpen(false);
-        router.refresh();
-      }
-    }, [state]);
+    // const router = useRouter();
+    // useEffect(() => {
+    //   if (state.success) {
+    //     toast(`${table} has been deleted!`);
+    //     setOpen(false);
+    //     router.refresh();
+    //   }
+    // }, [state]);
 
     return type === "delete" && id ? (
-      <form action={formAction} className="p-4 flex flex-col gap-4">
+      <form action="" className="p-4 flex flex-col gap-4">
         <input type="text | number" name="id" value={id} hidden />
         <span className="text-center font-medium">
           All data will be lost. Are you sure you want to delete this {table}?
